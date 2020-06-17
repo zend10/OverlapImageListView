@@ -16,18 +16,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val imageList = ArrayList<Bitmap>()
+        overlapImage.size = 200F
 
+        val imageList = ArrayList<Bitmap>()
         val imageResourceList = ArrayList<Int>()
         imageResourceList.add(R.drawable.yuya)
         imageResourceList.add(R.drawable.rio)
         imageResourceList.add(R.drawable.yoshino)
 
         imageResourceList.forEach {
-            Glide.with(this)
-                .asBitmap()
-                .load(it)
-                .apply(RequestOptions.circleCropTransform())
+            Glide.with(this).asBitmap().load(it).apply(RequestOptions.circleCropTransform())
                 .into(object : CustomTarget<Bitmap>() {
                     override fun onResourceReady(
                         resource: Bitmap,
