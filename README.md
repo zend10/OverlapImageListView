@@ -21,7 +21,7 @@ Add the dependency to your **app** build file `build.gradle`:
 
 ```
 dependencies {
-    implementation 'com.github.zend10:OverlapImageListView:v1.0.0'
+    implementation 'com.github.zend10:OverlapImageListView:v1.0.1'
 }
 ```
 
