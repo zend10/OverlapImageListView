@@ -10,8 +10,8 @@ android {
         applicationId "com.zen.overlapimagelist"
         minSdkVersion 21
         targetSdkVersion 28
-        versionCode 100000
-        versionName "1.0.0"
+        versionCode 100001
+        versionName "1.0.1"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

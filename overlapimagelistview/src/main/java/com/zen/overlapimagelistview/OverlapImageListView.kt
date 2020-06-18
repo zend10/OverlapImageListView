@@ -20,11 +20,36 @@ class OverlapImageListView(context: Context, attrs: AttributeSet) : View(context
     }
 
     var fillColor = DEFAULT_FILL_COLOR
+        set(value) {
+            field = value
+            invalidate()
+        }
+
     var strokeColor = DEFAULT_STROKE_COLOR
+        set(value) {
+            field = value
+            invalidate()
+        }
+
     var strokeWidth = DEFAULT_STROKE_WIDTH
+        set(value) {
+            field = value
+            invalidate()
+        }
+
     var circleCount = DEFAULT_CIRCLE_COUNT
+        set(value) {
+            field = value
+            requestLayout()
+            invalidate()
+        }
 
     var size: Float? = null
+        set(value) {
+            field = value
+            requestLayout()
+            invalidate()
+        }
 
     var image: Bitmap? = null
         set(value) {
@@ -33,6 +58,10 @@ class OverlapImageListView(context: Context, attrs: AttributeSet) : View(context
         }
 
     var imageList: ArrayList<Bitmap>? = null
+        set(value) {
+            field = value
+            invalidate()
+        }
 
     private val paint = Paint(Paint.ANTI_ALIAS_FLAG)
 
